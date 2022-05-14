@@ -23,3 +23,23 @@
         font-size: 6.4vw;
     }
 }
+/* .responsive{
+    display: flex;
+    flex-direction: column;
+
+}
+.responsive a{
+    color:green;
+    font-size: 1000px;
+} */
+@media(max-width:550px){
+    .responsive a{
+        font-size: 10rem !important; 
+       
+    }
+}
+.responive{
+    display: flex;
+    /* height:8rem !important; */
+    
+}

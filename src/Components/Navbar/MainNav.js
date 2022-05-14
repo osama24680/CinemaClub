@@ -16,7 +16,7 @@ const useStyles = makeStyles({
         width: "100% !important",
         position: "fixed",
         bottom: 0,
-        left:0,
+        left: 0,
         backgroundColor: "#2d313a !important",
         zIndex: 100,
     }
@@ -32,25 +32,27 @@ export default function LabelBottomNavigation() {
 
 
     return (
-        <BottomNavigation sx={{ width: 500, }} value={value} onChange={handleChange} className={style.root}>
+        <BottomNavigation sx={{ width: 500, }} value={value} onChange={handleChange} className={`${style.root} responive`} >
 
 
-            <Link to="/trending">
-                <BottomNavigationAction label="trending" style={{ color: "#fff" }} value="recents" icon={<WhatshotIcon />} />
-            </Link>
+          
+                <Link to="/trending">
+                    <BottomNavigationAction label="trending" style={{ color: "#fff" }} value="recents" icon={<WhatshotIcon />} />
+                </Link>
 
-            <Link to="/Movies">
-                <BottomNavigationAction label="Movies" style={{ color: "#fff" }} value="Movies" icon={<LocalMoviesIcon />} />
-            </Link>
+                <Link to="/Movies">
+                    <BottomNavigationAction label="Movies" style={{ color: "#fff" }} value="Movies" icon={<LocalMoviesIcon />} />
+                </Link>
 
-            <Link to="/series">
-                <BottomNavigationAction label="Series" style={{ color: "#fff" }} value="Series" icon={<LiveTvIcon />} />
-            </Link>
+                <Link to="/series">
+                    <BottomNavigationAction label="Series" style={{ color: "#fff" }} value="Series" icon={<LiveTvIcon />} />
+                </Link>
 
-            <Link to="/search">
-                <BottomNavigationAction label="Search" style={{ color: "#fff" }} value="Search" icon={<SearchIcon />} />
-            </Link>
-        
+                <Link to="/search">
+                    <BottomNavigationAction label="Search" style={{ color: "#fff" }} value="Search" icon={<SearchIcon />} />
+                </Link>
+           
+
         </BottomNavigation >
     );
 }

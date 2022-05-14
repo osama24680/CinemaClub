@@ -1,22 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,300;1,400&display=swap');
+
 * {
   scroll-behavior: smooth;
- 
+
 }
 
 .app {
-  /* min-height: 100vh; */
   background-color: #39445a;
   color: white;
-  /* padding-top: 130px; */
-  /* padding-bottom: 70px; */
-}
-
-
-@media (max-width: 700px) {
-  .app {
-    /* padding-top: 70px; */
-  }
 }
 
 .pageTitle {
@@ -30,12 +21,35 @@
   color: white;
 }
 
+.textAlignCenter {
+  text-align: center;
+  margin: auto;
+}
+
+.trending {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.fixing {
+  padding-top: 30px;
+  margin-top: 110px;
+  min-height: 75vh;
+}
+
+@media(max-width:1200px){
+  .fixing {
+    margin-top: 65px;
+  }
+}
 @media (max-width: 1000px) {
   .pageTitle {
     font-size: 6.4vw;
   }
 }
-.textAlignCenter{
-  text-align: center;
-  margin:auto;
+@media(max-width:550px){
+  .fixing {
+    margin-top: 25px;
+  }
 }

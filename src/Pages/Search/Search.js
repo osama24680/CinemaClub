@@ -5,7 +5,6 @@ import React, { useState, useEffect } from 'react'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import axios from "axios"
-import "./Search.css"
 import SingleContent from "../../Components/SingleContent/SingleContent"
 import CustomPaginationX from "../../Components/Pagination/Pagination"
 const Search = () => {
@@ -24,7 +23,7 @@ const Search = () => {
             }
         }
     })
-    const fetchSearch = async (selectedGenres) => {
+    const fetchSearch = async () => {
         const { data } = await axios.get(`https://api.themoviedb.org/3/search/${type ? "tv" : "movie"}?api_key=b9bdb09fc05c6f78ab2de960f7cc874e&language=en-US&query=${searchText}&page=${page}&include_adult=false`)
 
         setContent(data.results)
@@ -68,7 +67,7 @@ const Search = () => {
             <div className='trending' style={{marginTop: "40px"}}>
                 {
                     content && content.map((movie, index) => (
-                        <SingleContent id={movie.id} key={movie.id} movie={movie} mediaType="Movies" />
+                        <SingleContent id={movie.id} key={movie.id} movie={movie} mediaType={type===0?"movie":"tv"} />
                     ))
                 }
                 {searchText && !content && (type ? <h2>No  Movies Found</h2> : <h2>No Series Found</h2>)}

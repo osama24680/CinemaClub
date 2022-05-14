@@ -1,25 +1,30 @@
-.media {
+.media,.mediaX {
     display: flex;
     flex-direction: column;
     width: 200px;
     padding: 5px;
-    margin: 5px 0;
     background-color: #282c34;
     border-radius: 10px;
     position: relative;
     font-family: "Montserrat", sans-serif;
     height:420px;
     margin-top: 20px;
+    cursor: pointer
 }
-
+.mediaX{
+    cursor:unset
+}
 .media:hover {
     background-color: white;
     color: black;
 }
 
+
 @media (max-width: 550px) {
     .media {
-        width: 46%;
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
     }
 }
 
@@ -37,8 +42,7 @@
 .subTitle {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 3px;
-    padding: 0 2px;
+    padding: 0 5px;
     padding-bottom: 3px;
     
 }

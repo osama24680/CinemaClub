@@ -21,7 +21,7 @@ const style = {
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
-    color:"#fff"
+    color: "#fff"
 };
 
 
@@ -43,6 +43,7 @@ export default function ContentModal({ children, media_type, id }) {
     const fetchData = async () => {
         const { data } = await axios.get(`https://api.themoviedb.org/3/${media_type}/${id}?api_key=b9bdb09fc05c6f78ab2de960f7cc874e&language=en-US`);
         setContent(data);
+
     };
 
     const fetchVideo = async () => {
@@ -56,6 +57,11 @@ export default function ContentModal({ children, media_type, id }) {
         // eslint-disable-next-line
     }, []);
 
+    function truncate(str, n) {
+        return (
+            str?.length > n ? str.substr(0, n - 1) + "..." : str
+        )
+    }
     return (
         <div>
             <div onClick={handleOpen}>{children}</div>
@@ -72,7 +78,7 @@ export default function ContentModal({ children, media_type, id }) {
             >
                 <Fade in={open}>
                     <Box sx={style} className="style">
-                        {content && (
+                        {content ? (
                             <div >
                                 <div className="ContentModal">
                                     <img
@@ -108,7 +114,7 @@ export default function ContentModal({ children, media_type, id }) {
                                         )}
 
                                         <span className="ContentModal__description">
-                                            {content.overview}
+                                            {truncate (content.overview,500)}
                                         </span>
 
                                         <div>
@@ -127,7 +133,9 @@ export default function ContentModal({ children, media_type, id }) {
                                     </div>
                                 </div>
                             </div>
-                        )}
+                        ) : <h1 style={{ textAlign: "center" }}>there are no content</h1>}
+
+
                     </Box>
                 </Fade>
             </Modal>
