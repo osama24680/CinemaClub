@@ -2,11 +2,8 @@ import { ThemeProvider } from '@emotion/react'
 import { Button, createMuiTheme, TextField } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
 import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 import axios from "axios"
 import "./Search.css"
 import SingleContent from "../../Components/SingleContent/SingleContent"
@@ -16,7 +13,6 @@ const Search = () => {
     const [type, setType] = useState(0)
     const [page, setPage] = useState(1)
     const [searchText, setSearchText] = useState("")
-    const [contect, setContect] = useState()
     const [numberOfPages, setNumberOfPages] = useState()
     const [content, setContent] = useState([])
 

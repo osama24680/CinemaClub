@@ -4,7 +4,6 @@ import SingleContent from "../../Components/SingleContent/SingleContent"
 import CustomPaginationX from "../../Components/Pagination/Pagination"
 import GenresComp from "../../Components/Genres/GenresComp"
 import useGenres from "../../hooks/useGenre"
-import { height } from '@mui/system'
 const Series = () => {
 
     const [content, setContent] = useState([])
