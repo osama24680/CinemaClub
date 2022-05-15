@@ -8,7 +8,7 @@ const CharacterData = () => {
     let [searchParam, setSearchParam] = useSearchParams()
     const [personData, setPersonData] = useState([]);
     let currentID = searchParam.get("id")
-
+    // setSearchParam(currentID)
     const fetchPerson = async () => {
         const { data } = await axios.get(`https://api.themoviedb.org/3/person/${currentID}?api_key=b9bdb09fc05c6f78ab2de960f7cc874e&language=en-US`);
         setPersonData(data)
@@ -30,12 +30,12 @@ const CharacterData = () => {
     }
 
     return (
-        <div className="fixing" style={{paddingBottom:"60px"}}>
+        <div className="fixing" style={{ paddingBottom: "60px" }}>
             <div className="upper">
                 <div className="imgLeft">
-                    <img src={`${img_300}${personData.profile_path}`} alt={personData.profile_path} />
+                    <img src={`${img_300}${personData.profile_path}`} alt={personData.profile_path} className="imgBorder"/>
                 </div>
-                <div className="privateData">
+                <div className="privateData" onClick={(e) =>setSearchParam({id:e.target.value}) }>
                     <h1>{personData.name}</h1>
                     <div className="biography">
                         <p className="ContentModal__description">{truncate(personData.biography, 500)}</p>
@@ -49,10 +49,12 @@ const CharacterData = () => {
                     </div>
                 </div>
             </div>
-            <CharacterAchievments currentID={currentID}/>
+            <CharacterAchievments currentID={currentID} />
 
         </div>
     )
 }
 
 export default CharacterData
+
+

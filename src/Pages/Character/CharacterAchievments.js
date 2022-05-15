@@ -6,7 +6,6 @@ import { unavailable } from "../../Components/Config"
 import Badge from '@mui/material/Badge';
 
 const CharacterAchievments = ({ currentID }) => {
-
     const [personAchievments, setPersonAchievments] = useState([]);
 
     const fetchPerson = async () => {
@@ -19,10 +18,11 @@ const CharacterAchievments = ({ currentID }) => {
         // eslint-disable-next-line
     }, []);
 
+
     return (
         <div className="trending" >
-            {personAchievments?personAchievments.map(achieve => (
-                <div key={achieve.id}>
+            {personAchievments?personAchievments.map((achieve,index) => (
+                <div key={index} >
                     <div className="mediaX"  >
                         <Badge badgeContent={achieve.vote_average ? achieve.vote_average : "?"} color={achieve.vote_average > 7 ? "primary" : "warning"} />
                         <img className="poster" src={achieve.poster_path ? `${img_300}/${achieve.poster_path}` : unavailable} alt={achieve.name ? achieve.name : achieve.original_title} />
@@ -38,4 +38,4 @@ const CharacterAchievments = ({ currentID }) => {
     )
 }
 
-export default CharacterAchievments
+export default React.memo(CharacterAchievments)

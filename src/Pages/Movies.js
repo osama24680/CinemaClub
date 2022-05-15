@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios"
-import SingleContent from "../../Components/SingleContent/SingleContent"
-import CustomPaginationX from "../../Components/Pagination/Pagination"
-import GenresComp from "../../Components/Genres/GenresComp"
-import useGenres from "../../hooks/useGenre"
+import SingleContent from "../Components/SingleContent/SingleContent"
+import CustomPaginationX from "../Components/Pagination/Pagination"
+import GenresComp from "../Components/Genres/GenresComp"
+import useGenres from "../hooks/useGenre"
 
 const Movies = () => {
     const [content, setContent] = useState([])
@@ -43,7 +43,7 @@ const Movies = () => {
 
             </div>
             {content.length > 1 ? <CustomPaginationX setPage={setPage} setNumberOfPages={setNumberOfPages} numberOfPages={numberOfPages} /> : <h1 style={{ textAlign: "center", height: "60vh", marginTop: "20vh" }}>Loading movies ...</h1>}
-
+            
         </div>
     )
 }

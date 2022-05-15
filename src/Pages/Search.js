@@ -1,12 +1,12 @@
 import { ThemeProvider } from '@emotion/react'
-import { Button, createMuiTheme, TextField } from '@mui/material'
+import { Button, createTheme  , TextField } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
 import React, { useState, useEffect } from 'react'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import axios from "axios"
-import SingleContent from "../../Components/SingleContent/SingleContent"
-import CustomPaginationX from "../../Components/Pagination/Pagination"
+import SingleContent from "../Components/SingleContent/SingleContent"
+import CustomPaginationX from "../Components/Pagination/Pagination"
 const Search = () => {
 
     const [type, setType] = useState(0)
@@ -15,7 +15,7 @@ const Search = () => {
     const [numberOfPages, setNumberOfPages] = useState()
     const [content, setContent] = useState([])
 
-    const darkTheme = createMuiTheme({
+    const darkTheme = createTheme({
         palette: {
             type: "dark",
             primary: {

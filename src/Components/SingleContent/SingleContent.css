@@ -12,7 +12,8 @@
     cursor: pointer
 }
 .mediaX{
-    cursor:unset
+    cursor:unset;
+    margin-top: 50px;
 }
 .media:hover {
     background-color: white;

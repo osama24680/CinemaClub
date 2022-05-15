@@ -35,23 +35,23 @@ export default function LabelBottomNavigation() {
         <BottomNavigation sx={{ width: 500, }} value={value} onChange={handleChange} className={`${style.root} responive`} >
 
 
-          
-                <Link to="/trending">
-                    <BottomNavigationAction label="trending" style={{ color: "#fff" }} value="recents" icon={<WhatshotIcon />} />
-                </Link>
 
-                <Link to="/Movies">
-                    <BottomNavigationAction label="Movies" style={{ color: "#fff" }} value="Movies" icon={<LocalMoviesIcon />} />
-                </Link>
+            <Link to="/trending">
+                <BottomNavigationAction label="trending" style={{ color: "#fff" }} value="recents" icon={<WhatshotIcon />} />
+            </Link>
 
-                <Link to="/series">
-                    <BottomNavigationAction label="Series" style={{ color: "#fff" }} value="Series" icon={<LiveTvIcon />} />
-                </Link>
+            <Link to="/Movies">
+                <BottomNavigationAction label="Movies" style={{ color: "#fff" }} value="Movies" icon={<LocalMoviesIcon />} />
+            </Link>
 
-                <Link to="/search">
-                    <BottomNavigationAction label="Search" style={{ color: "#fff" }} value="Search" icon={<SearchIcon />} />
-                </Link>
-           
+            <Link to="/series">
+                <BottomNavigationAction label="Series" style={{ color: "#fff" }} value="Series" icon={<LiveTvIcon />} />
+            </Link>
+
+            <Link to="/search">
+                <BottomNavigationAction label="Search" style={{ color: "#fff" }} value="Search" icon={<SearchIcon />} />
+            </Link>
+
 
         </BottomNavigation >
     );
