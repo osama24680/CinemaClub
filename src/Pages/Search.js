@@ -72,7 +72,7 @@ const Search = () => {
                 }
                 {searchText && !content && (type ? <h2>No  Movies Found</h2> : <h2>No Series Found</h2>)}
                 
-                {content.length > 1 ?
+                {content.length > 0 ?
                     <CustomPaginationX
                         setPage={setPage}
                         setNumberOfPages={setNumberOfPages}

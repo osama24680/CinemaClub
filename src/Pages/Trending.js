@@ -28,7 +28,7 @@ const Trending = () => {
                 }
             </div>
         
-            {content.length > 1 ? <CustomPaginationX setPage={setPage} setNumberOfPages={setNumberOfPages} numberOfPages={numberOfPages} /> : <h1 style={{ textAlign: "center", height: "60vh", marginTop: "20vh" }}>Loading ...</h1>}
+            {content.length > 0 ? <CustomPaginationX setPage={setPage} setNumberOfPages={setNumberOfPages} numberOfPages={numberOfPages} /> : <h1 style={{ textAlign: "center", height: "60vh", marginTop: "20vh" }}>Loading ...</h1>}
         </div>
     )
 }
