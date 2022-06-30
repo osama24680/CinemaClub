@@ -2,8 +2,8 @@
     width: 100%;
     cursor: pointer;
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     text-transform: uppercase;
@@ -14,32 +14,74 @@
     box-shadow: 0px 1px 5px black;
     color: white;
     z-index: 100;
-    
+
 }
 
-@media (max-width: 1000px) {
+.loginName {
+    color: #fff;
+    z-index: 2000;
+    position: fixed;
+    top: 20px
+}
+
+.Logout {
+    color: #fff;
+    z-index: 2000;
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 1030px) {
     .header {
         padding-top: 15px;
         font-size: 6.4vw;
     }
-}
-/* .responsive{
-    display: flex;
-    flex-direction: column;
+    .loginName {
+        font-size: 30px;
+        left: 20px;
+    }
 
-}
-.responsive a{
-    color:green;
-    font-size: 1000px;
-} */
-@media(max-width:550px){
-    .responsive a{
-        font-size: 10rem !important; 
-       
+    .Logout {
+        right: 20px;
+        font-size: 30px
     }
 }
-.responive{
+
+@media(max-width:770px) {
+    .responsive a {
+        font-size: 10rem !important;
+    }
+
+    .loginName {
+        font-size: 20px;
+        left: 20px;
+    }
+
+    .Logout {
+        right: 20px;
+        font-size: 20px
+    }
+}
+@media(max-width:550px) {
+    .responsive a {
+        font-size: 10rem !important;
+    }
+
+    .loginName {
+        font-size: 10px;
+        left: 10px;
+    }
+
+    .Logout {
+        right: 10px;
+        font-size: 10px
+    }
+}
+
+.responive {
     display: flex;
     /* height:8rem !important; */
-    
+
 }

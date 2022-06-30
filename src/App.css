@@ -4,7 +4,9 @@
   scroll-behavior: smooth;
 
 }
-
+body{
+  font-family: "Montserrat", sans-serif;
+}
 .app {
   background-color: #39445a;
   color: white;

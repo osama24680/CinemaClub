@@ -30,7 +30,7 @@ const CharacterAchievments = ({ currentID }) => {
                         <div className="subTitle">
                             {achieve.media_type && <span className="">{achieve.media_type}</span>}
                             <span className={`${!achieve.media_type ? "textAlignCenter" : ""}  `}>{achieve.first_air_date ? achieve.first_air_date : achieve.release_date}</span>
-                        </div>
+                        </div>p
                     </div>
                 </div>
             )): <h1 style={{textAlign:"center"}}>Loading....</h1>}

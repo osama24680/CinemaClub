@@ -8,7 +8,6 @@ const CharacterData = () => {
     let [searchParam, setSearchParam] = useSearchParams()
     const [personData, setPersonData] = useState([]);
     let currentID = searchParam.get("id")
-    // setSearchParam(currentID)
     const fetchPerson = async () => {
         const { data } = await axios.get(`https://api.themoviedb.org/3/person/${currentID}?api_key=b9bdb09fc05c6f78ab2de960f7cc874e&language=en-US`);
         setPersonData(data)
